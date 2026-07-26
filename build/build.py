@@ -69,7 +69,7 @@ C["pt"] = {
  "dia_e":"O diagnóstico","dia_t":"Antes de qualquer proposta, um documento.",
  "dia_b":"Uma auditoria completa da sua presença online. O que funciona, o que bloqueia, o que fazem os concorrentes e por que ordem corrigir. Fica consigo, trabalhemos juntos ou não.",
  "dia":["O estado medido do site, do SEO e das suas contas","O que fazem os concorrentes nas mesmas pesquisas","As correções a começar esta semana, por prioridade","Um plano de 90 dias, com os indicadores a acompanhar"],
- "dia_btn":"Pedir o diagnóstico",
+ "dia_btn":"Pedir o diagnóstico","dia_label":"O que recebe",
  "brief":"Duas páginas do diagnóstico, na horizontal, luz rasante. Nenhuma imagem de banco.",
  "sui_e":"Situações","sui_t":"Quatro situações, o mesmo método.",
  "sui_i":"Vai reconhecer a sua. Nos quatro casos o ponto de partida é o mesmo diagnóstico, e os trabalhos duram no mínimo três meses. É o tempo de que os números precisam.",
@@ -115,7 +115,7 @@ C["en"] = {
  "dia_e":"The diagnostic","dia_t":"Before any proposal, a document.",
  "dia_b":"A complete audit of your online presence. What works, what blocks, what your competitors do, and the order in which to fix it. It stays yours, whether we work together or not.",
  "dia":["A measured view of your site, your search visibility and your accounts","What your competitors do on the same searches","The fixes to start this week, ranked by priority","A 90 day plan, with the indicators that will be tracked"],
- "dia_btn":"Request the diagnostic",
+ "dia_btn":"Request the diagnostic","dia_label":"What you receive",
  "brief":"Two pages of the diagnostic, flat, raking light. No stock imagery.",
  "sui_e":"Situations","sui_t":"Four situations, one method.",
  "sui_i":"You will recognise yours. In all four the starting point is the same diagnostic, and engagements run for three months at least. That is the time the numbers need.",
@@ -161,7 +161,7 @@ C["fr"] = {
  "dia_e":"Le diagnostic","dia_t":"Avant toute proposition, un document.",
  "dia_b":"Un audit complet de votre présence en ligne. Ce qui fonctionne, ce qui bloque, ce que font vos concurrents, et l’ordre dans lequel corriger. Vous le gardez, que l’on travaille ensemble ou non.",
  "dia":["L’état mesuré de votre site, de votre référencement et de vos comptes","Ce que font vos concurrents sur les mêmes recherches","Les corrections à engager cette semaine, classées par priorité","Un plan de 90 jours, avec les indicateurs qui seront suivis"],
- "dia_btn":"Demander le diagnostic",
+ "dia_btn":"Demander le diagnostic","dia_label":"Ce que vous recevez",
  "brief":"Deux pages du diagnostic, à plat, lumière rasante. Aucune image de banque.",
  "sui_e":"Situations","sui_t":"Quatre situations, une même méthode.",
  "sui_i":"Vous reconnaîtrez la vôtre. Dans les quatre cas, le point de départ est le même diagnostic, et les missions durent trois mois au minimum. C’est le temps qu’il faut aux chiffres pour bouger.",
@@ -207,7 +207,7 @@ C["nl"] = {
  "dia_e":"De diagnose","dia_t":"Vóór elk voorstel, een document.",
  "dia_b":"Een volledige audit van uw online aanwezigheid. Wat werkt, wat blokkeert, wat uw concurrenten doen en in welke volgorde u het aanpakt. Het blijft van u, of we nu samenwerken of niet.",
  "dia":["Een gemeten beeld van uw site, uw vindbaarheid en uw accounts","Wat uw concurrenten doen op dezelfde zoekopdrachten","De correcties om deze week te starten, op prioriteit","Een plan van 90 dagen, met de indicatoren die we volgen"],
- "dia_btn":"Vraag de diagnose aan",
+ "dia_btn":"Vraag de diagnose aan","dia_label":"Wat u ontvangt",
  "brief":"Twee pagina’s van de diagnose, plat gelegd, strijklicht. Geen stockbeelden.",
  "sui_e":"Situaties","sui_t":"Vier situaties, één methode.",
  "sui_i":"U herkent de uwe. In alle vier begint het bij dezelfde diagnose, en een opdracht loopt minstens drie maanden. Dat is de tijd die de cijfers nodig hebben.",
@@ -253,7 +253,7 @@ C["ar"] = {
  "dia_e":"التشخيص","dia_t":"قبل أي عرض، وثيقة.",
  "dia_b":"تدقيق كامل لحضوركم الرقمي. ما ينجح، وما يعيق، وما يفعله منافسوكم، وترتيب المعالجة. الوثيقة لكم، سواء عملنا معاً أو لا.",
  "dia":["قياس دقيق لموقعكم ولظهوركم في البحث ولحساباتكم","ما يفعله منافسوكم على عمليات البحث نفسها","الإصلاحات التي تبدأ هذا الأسبوع، مرتبة حسب الأولوية","خطة 90 يوماً مع المؤشرات التي نتابعها"],
- "dia_btn":"اطلبوا التشخيص",
+ "dia_btn":"اطلبوا التشخيص","dia_label":"ما تحصلون عليه",
  "brief":"صفحتان من التشخيص، مسطحتان، بإضاءة جانبية. لا صور من البنوك.",
  "sui_e":"الحالات","sui_t":"أربع حالات، ومنهج واحد.",
  "sui_i":"ستتعرفون على حالتكم. في الحالات الأربع تبدأ الطريق بالتشخيص نفسه، ولا تقل المهمة عن ثلاثة أشهر. هذا هو الوقت الذي تحتاجه الأرقام.",
@@ -390,7 +390,6 @@ def render(code):
   <div class="divider"></div>
 
   <section class="mission" id="mission" data-rail>
-    {SYM_MISSION}
     <div class="wrap">
       {eyebrow("02", d["mis_e"], dark=True)}
       <h2 class="mission-title" data-reveal>{d["mis_t"]}</h2>
@@ -417,18 +416,16 @@ def render(code):
 
   <section id="diagnostic" data-rail>
     <div class="wrap diag">
-      <div>
+      <div class="diag-main">
         {eyebrow("04", d["dia_e"])}
         <h2 class="h-title" data-reveal>{d["dia_t"]}</h2>
         <p class="lead" data-reveal style="margin-top:22px">{d["dia_b"]}</p>
-        <ul class="diag-list" data-reveal>{dlist}</ul>
         <a class="btn btn-line" {WATT} data-reveal>{d["dia_btn"]}</a>
       </div>
-      <figure class="frame" data-reveal>
-        {SYM_FRAME}
-        <span class="frame-word">{WMI}</span>
-        <figcaption class="brief">{d["brief"]}</figcaption>
-      </figure>
+      <div class="diag-side">
+        <p class="diag-label" data-reveal>{d["dia_label"]}</p>
+        <ul class="diag-list" data-reveal>{dlist}</ul>
+      </div>
     </div>
   </section>
 

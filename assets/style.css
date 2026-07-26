@@ -217,11 +217,6 @@ html[dir="rtl"] .statement { font-weight: 400; }
 
 /* Mission, the dark storytelling band */
 .mission { background: var(--ink); color: var(--on-dark); position: relative; overflow: hidden; }
-.mission-mark {
-  position: absolute; top: 50%; inset-inline-end: -6%; transform: translateY(-50%);
-  width: min(46vw, 600px); height: auto; opacity: .5; pointer-events: none;
-}
-html[dir="rtl"] .mission-mark { transform: translateY(-50%) scaleX(-1); }
 .mission .wrap { position: relative; z-index: 1; }
 .mission-title {
   font-family: var(--serif); font-weight: 400; color: var(--on-dark);
@@ -253,40 +248,24 @@ html[dir="rtl"] .principle .p-line { font-weight: 400; }
 }
 html[dir="rtl"] .group-items li { font-weight: 400; }
 
-/* Diagnostic */
-.diag { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 88px); align-items: stretch; }
-.diag-list { margin-block: 34px 40px; max-width: 46ch; }
+/* Diagnostic, two editorial columns of text */
+.diag { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(40px, 6vw, 92px); align-items: start; }
+.diag-main .btn { margin-top: 38px; }
+.diag-side { padding-top: 6px; }
+.diag-label {
+  font-family: var(--sans); font-weight: 400; font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.24em; color: var(--gold); margin-bottom: 8px;
+}
+html[dir="rtl"] .diag-label { letter-spacing: 0; font-size: 12px; }
+.diag-list { max-width: 46ch; }
 .diag-list li {
-  position: relative; padding-block: 16px; padding-inline-start: 24px;
+  position: relative; padding-block: 18px; padding-inline-start: 26px;
   border-top: 1px solid var(--rule-soft);
-  font-family: var(--sans); font-weight: 300; font-size: 15px; line-height: 1.6; color: var(--muted);
+  font-family: var(--sans); font-weight: 300; font-size: 15.5px; line-height: 1.6; color: var(--ink);
 }
+.diag-list li:last-child { border-bottom: 1px solid var(--rule-soft); }
 html[dir="rtl"] .diag-list li { font-weight: 400; }
-.diag-list li::before { content: ""; position: absolute; inset-inline-start: 0; top: 25px; width: 8px; height: 1px; background: var(--gold); }
-
-/* Diagnostic visual, a branded plate carrying the mark */
-.frame {
-  position: relative; aspect-ratio: 3 / 4; background: var(--surface); border: 1px solid var(--rule);
-  display: grid; place-items: center; overflow: hidden;
-}
-.frame::before {
-  content: ""; position: absolute; inset: 14px; border: 1px solid var(--rule-soft); pointer-events: none;
-}
-.frame .frame-mark { width: 42%; opacity: .9; }
-.frame .frame-word {
-  position: absolute; top: calc(50% + 22%); left: 50%; transform: translateX(-50%);
-  font-family: "Bodoni Moda", Georgia, serif; font-weight: 400; font-size: 13px;
-  letter-spacing: 0.3em; text-transform: uppercase; direction: ltr; white-space: nowrap;
-}
-.frame .frame-word .ini { font-weight: 700; }
-.frame .frame-word .peak { color: var(--ink); }
-.frame .frame-word .pulse { color: var(--gold); }
-.frame .brief {
-  position: absolute; inset-inline-start: 18px; bottom: 16px; inset-inline-end: 18px;
-  font-family: var(--sans); font-weight: 400; font-size: 9px; text-transform: uppercase;
-  letter-spacing: 0.22em; line-height: 1.7; color: var(--ink);
-}
-html[dir="rtl"] .frame .brief { letter-spacing: 0; font-size: 11px; }
+.diag-list li::before { content: ""; position: absolute; inset-inline-start: 0; top: 27px; width: 12px; height: 1px; background: var(--gold); }
 
 /* Situations */
 .cases { display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(40px, 6vw, 88px); margin-top: 60px; }
@@ -359,11 +338,17 @@ html[dir="rtl"] .rail .rail-label { letter-spacing: 0; font-size: 11px; transfor
 }
 @media (max-width: 720px) {
   .nav, .header-cta { display: none; }
-  .diag { grid-template-columns: 1fr; }
+  .diag { grid-template-columns: 1fr; gap: 8px; }
+  .diag-main .btn { margin-bottom: 26px; }
   .cases { grid-template-columns: 1fr; }
   .group { grid-template-columns: 1fr; gap: 18px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   body { padding-bottom: 60px; }
+  /* keep the header wordmark clean on phones */
+  .site-header .sig-sub { display: none; }
+  .site-header .sig-name { font-size: 17px; letter-spacing: 0.18em; }
+  .header-row { min-height: 64px; }
+  .mark-word { letter-spacing: 0.26em; }
   .actionbar {
     display: grid; grid-template-columns: 1fr 1fr;
     position: fixed; inset-inline: 0; bottom: 0; z-index: 60;
@@ -383,7 +368,6 @@ html[dir="rtl"] .rail .rail-label { letter-spacing: 0; font-size: 11px; transfor
 @media (max-width: 460px) {
   .footer-grid { grid-template-columns: 1fr; }
   .group-items { columns: 1; }
-  .frame .frame-mark { width: 52%; }
 }
 
 /* Reduced motion */
