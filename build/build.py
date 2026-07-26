@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
 # Peak Pulse site generator. One template, five native language versions.
 import os, pathlib
+from urllib.parse import quote
 ROOT = pathlib.Path("/home/user/Peak-Pulse")
 
 PATHS = {"pt":"/","en":"/en/","fr":"/fr/","nl":"/nl/","ar":"/ar/"}
 BASE  = "https://peakpulse.pt"
+WA_NUMBER = "351920484417"   # +351 920 484 417
+
+def wa_url(msg):
+    return f"https://wa.me/{WA_NUMBER}?text={quote(msg)}"
 
 WMI = ('<span class="peak"><span class="ini">P</span>EAK</span> '
        '<span class="pulse"><span class="ini">P</span>ULSE</span>')
@@ -76,7 +81,7 @@ C["pt"] = {
            ("Medição","Um ponto mensal sobre os números que decidem: pedidos, orçamentos, vendas.")],
  "clo_t":"Comecemos por ver onde está.","clo_2":"Ver os serviços","clo_f":"Lisboa. Resposta em dois dias úteis",
  "foot":["Serviços","Abordagem","Contacto"],
- "legal":["Privacidade","Cookies"],"city":"Lisboa","wa":"WhatsApp",
+ "legal":["Privacidade","Cookies"],"city":"Lisboa","wa":"WhatsApp","wa_msg":"Olá Peak Pulse, gostaria de pedir um diagnóstico.",
 }
 
 C["en"] = {
@@ -122,7 +127,7 @@ C["en"] = {
            ("Measurement","A monthly review of the numbers that decide: enquiries, quotes, sales.")],
  "clo_t":"Let us start by seeing where you stand.","clo_2":"See the services","clo_f":"Lisbon. Reply within two business days",
  "foot":["Services","Approach","Contact"],
- "legal":["Privacy","Cookies"],"city":"Lisbon","wa":"WhatsApp",
+ "legal":["Privacy","Cookies"],"city":"Lisbon","wa":"WhatsApp","wa_msg":"Hello Peak Pulse, I would like to request a diagnostic.",
 }
 
 C["fr"] = {
@@ -168,7 +173,7 @@ C["fr"] = {
            ("Mesure","Un point mensuel sur les chiffres qui décident : demandes, devis, ventes.")],
  "clo_t":"Commençons par regarder où vous en êtes.","clo_2":"Voir les services","clo_f":"Lisbonne. Réponse sous deux jours ouvrés",
  "foot":["Services","Approche","Contact"],
- "legal":["Confidentialité","Cookies"],"city":"Lisbonne","wa":"WhatsApp",
+ "legal":["Confidentialité","Cookies"],"city":"Lisbonne","wa":"WhatsApp","wa_msg":"Bonjour Peak Pulse, je souhaite demander un diagnostic.",
 }
 
 C["nl"] = {
@@ -214,7 +219,7 @@ C["nl"] = {
            ("Meting","Een maandelijkse blik op de cijfers die beslissen: aanvragen, offertes, verkopen.")],
  "clo_t":"Laten we beginnen met te zien waar u staat.","clo_2":"Bekijk de diensten","clo_f":"Lissabon. Antwoord binnen twee werkdagen",
  "foot":["Diensten","Aanpak","Contact"],
- "legal":["Privacy","Cookies"],"city":"Lissabon","wa":"WhatsApp",
+ "legal":["Privacy","Cookies"],"city":"Lissabon","wa":"WhatsApp","wa_msg":"Hallo Peak Pulse, ik wil graag een diagnose aanvragen.",
 }
 
 C["ar"] = {
@@ -260,7 +265,7 @@ C["ar"] = {
            ("القياس","مراجعة شهرية للأرقام التي تحسم: الطلبات، العروض، المبيعات.")],
  "clo_t":"لنبدأ بمعرفة أين أنتم.","clo_2":"اطّلعوا على الخدمات","clo_f":"لشبونة. الرد خلال يومَي عمل",
  "foot":["الخدمات","المنهج","التواصل"],
- "legal":["الخصوصية","ملفات الارتباط"],"city":"لشبونة","wa":"واتساب",
+ "legal":["الخصوصية","ملفات الارتباط"],"city":"لشبونة","wa":"واتساب","wa_msg":"مرحباً بيك بالس، أود طلب تشخيص.",
 }
 
 # ---------------------------------------------------------------- template
@@ -288,6 +293,8 @@ def rail_html(d):
 
 def render(code):
     d=C[code]; rtl = d["dir"]=="rtl"; home=PATHS[code]
+    WA = wa_url(d["wa_msg"])                                   # click to chat, +351 920 484 417
+    WATT = f'href="{WA}" target="_blank" rel="noopener"'       # WhatsApp link attributes
     preload = ('<link rel="preload" href="/assets/fonts/naskh-400.woff2" as="font" type="font/woff2" crossorigin>\n'
                '<link rel="preload" href="/assets/fonts/bodoni-400.woff2" as="font" type="font/woff2" crossorigin>\n'
                '<link rel="preload" href="/assets/fonts/bodoni-700.woff2" as="font" type="font/woff2" crossorigin>\n'
@@ -345,7 +352,7 @@ def render(code):
     </nav>
     <div class="header-end">
       {langs_html(code)}
-      <a class="btn btn-solid header-cta" href="#diagnostic">{d["cta"]}</a>
+      <a class="btn btn-solid header-cta" {WATT}>{d["cta"]}</a>
     </div>
   </div>
 </header>
@@ -359,7 +366,7 @@ def render(code):
       <h1 class="hero-title" data-reveal>{d["hero_t"]}</h1>
       <p class="hero-sub" data-reveal>{d["hero_s"]}</p>
       <div class="hero-actions" data-reveal>
-        <a class="btn btn-solid" href="#diagnostic">{d["cta"]}</a>
+        <a class="btn btn-solid" {WATT}>{d["cta"]}</a>
         <span class="hero-note">{d["hero_n"]}</span>
       </div>
     </div>
@@ -415,7 +422,7 @@ def render(code):
         <h2 class="h-title" data-reveal>{d["dia_t"]}</h2>
         <p class="lead" data-reveal style="margin-top:22px">{d["dia_b"]}</p>
         <ul class="diag-list" data-reveal>{dlist}</ul>
-        <a class="btn btn-line" href="#diagnostic" data-reveal>{d["dia_btn"]}</a>
+        <a class="btn btn-line" {WATT} data-reveal>{d["dia_btn"]}</a>
       </div>
       <figure class="frame" data-reveal>
         {SYM_FRAME}
@@ -456,7 +463,7 @@ def render(code):
     <div class="wrap">
       <h2 class="h-title" data-reveal>{d["clo_t"]}</h2>
       <div class="closing-actions" data-reveal>
-        <a class="btn btn-solid" href="#diagnostic">{d["cta"]}</a>
+        <a class="btn btn-solid" {WATT}>{d["cta"]}</a>
         <a class="btn btn-line" href="#services">{d["clo_2"]}</a>
       </div>
       <p class="closing-fine" data-reveal>{d["clo_f"]}</p>
@@ -486,8 +493,8 @@ def render(code):
       <div class="footer-col">
         <h3>{d["foot"][2]}</h3>
         <ul>
-          <li><a href="#diagnostic">{d["cta"]}</a></li>
-          <li><a href="#diagnostic">{d["wa"]}</a></li>
+          <li><a {WATT}>{d["cta"]}</a></li>
+          <li><a {WATT}>{d["wa"]}</a></li>
           <li><span>{d["city"]}</span></li>
         </ul>
       </div>
@@ -510,8 +517,8 @@ def render(code):
 </footer>
 
 <nav class="actionbar" aria-label="Peak Pulse">
-  <a href="#diagnostic">{d["cta"]}</a>
-  <a href="#diagnostic">{d["wa"]}</a>
+  <a {WATT}>{d["cta"]}</a>
+  <a {WATT}>{d["wa"]}</a>
 </nav>
 
 <script>
