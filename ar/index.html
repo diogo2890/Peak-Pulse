@@ -9,16 +9,18 @@
 <link rel="alternate" hreflang="pt" href="https://peakpulse.pt/">
 <link rel="alternate" hreflang="en" href="https://peakpulse.pt/en/">
 <link rel="alternate" hreflang="fr" href="https://peakpulse.pt/fr/">
+<link rel="alternate" hreflang="nl" href="https://peakpulse.pt/nl/">
 <link rel="alternate" hreflang="ar" href="https://peakpulse.pt/ar/">
 <link rel="alternate" hreflang="x-default" href="https://peakpulse.pt/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/naskh-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/bodoni-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/bodoni-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/jost-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"Organization","name":"Peak Pulse","url":"https://peakpulse.pt/","description":"بيك بالس تبني حضوركم الرقمي وتديره.","areaServed":"PT","knowsLanguage":["pt","en","fr","ar"]},
+{"@type":"Organization","name":"Peak Pulse","url":"https://peakpulse.pt/","description":"بيك بالس تبني حضوركم الرقمي وتديره.","areaServed":"PT","knowsLanguage":["pt","en","fr","nl","ar"]},
 {"@type":"WebSite","name":"Peak Pulse","url":"https://peakpulse.pt/ar/","inLanguage":"ar"}]}
 </script>
 </head>
@@ -27,131 +29,91 @@
 <header class="site-header">
   <div class="wrap header-row">
     <a class="sig" href="/ar/" aria-label="Peak Pulse">
-      <span class="sig-name"><span class="peak">PEAK</span> <span class="pulse">PULSE</span></span>
+      <span class="sig-name"><span class="peak"><span class="ini">P</span>EAK</span> <span class="pulse"><span class="ini">P</span>ULSE</span></span>
       <span class="sig-sub">Digital Marketing Agency</span>
     </a>
-    <nav class="nav" aria-label="الرئيسية">
-      <a href="#khadamat">الخدمات</a>
-      <a href="#tashkhis">التشخيص</a>
-      <a href="#manhaj">المنهج</a>
+    <nav class="nav" aria-label="Peak Pulse">
+      <a href="#services">الخدمات</a>
+      <a href="#diagnostic">التشخيص</a>
+      <a href="#method">المنهج</a>
     </nav>
     <div class="header-end">
-      <div class="langs">
-        <a href="/"    hreflang="pt" title="Português">PT</a>
-        <a href="/en/" hreflang="en" title="English">EN</a>
-        <a href="/fr/" hreflang="fr" title="Français">FR</a>
-        <a href="/ar/" hreflang="ar" aria-current="true" title="العربية">AR</a>
-      </div>
-      <a class="btn btn-solid header-cta" href="#tashkhis">اطلبوا تشخيصاً</a>
+      <div class="langs"><a href="/" hreflang="pt" title="Português">PT</a><a href="/en/" hreflang="en" title="English">EN</a><a href="/fr/" hreflang="fr" title="Français">FR</a><a href="/nl/" hreflang="nl" title="Nederlands">NL</a><a href="/ar/" hreflang="ar" aria-current="true" dir="rtl" title="العربية">AR</a></div>
+      <a class="btn btn-solid header-cta" href="#diagnostic">اطلبوا تشخيصاً</a>
     </div>
   </div>
 </header>
 
+<nav class="rail" aria-hidden="true"><a href="#situation"><span class="rail-tick"></span><span class="rail-label">01 أين أنتم اليوم</span></a><a href="#mission"><span class="rail-tick"></span><span class="rail-label">02 مهمتنا</span></a><a href="#services"><span class="rail-tick"></span><span class="rail-label">03 الخدمات</span></a><a href="#diagnostic"><span class="rail-tick"></span><span class="rail-label">04 التشخيص</span></a><a href="#situations"><span class="rail-tick"></span><span class="rail-label">05 الحالات</span></a><a href="#method"><span class="rail-tick"></span><span class="rail-label">06 المنهج</span></a></nav>
+
 <main>
 
-  <section class="hero" id="aala">
+  <section class="hero" id="top">
     <div class="wrap">
       <h1 class="hero-title" data-reveal>أن تُوجَد. ثم أن تُختار.</h1>
       <p class="hero-sub" data-reveal>بيك بالس تبني حضوركم الرقمي وتديره. الاستراتيجية، الهوية، الموقع، محركات البحث، المحتوى، الإعلان. خطوة واحدة في كل مرة، بالترتيب الذي يعطي نتيجة.</p>
       <div class="hero-actions" data-reveal>
-        <a class="btn btn-solid" href="#tashkhis">اطلبوا تشخيصاً</a>
+        <a class="btn btn-solid" href="#diagnostic">اطلبوا تشخيصاً</a>
         <span class="hero-note">الرد خلال يومَي عمل</span>
       </div>
     </div>
   </section>
 
   <div class="markband" aria-hidden="true">
-    <div class="mark-rule">
-      <svg viewBox="0 0 200 120">
-        <path d="M38,120 L100,0 L162,120" fill="none" stroke="#16181C" stroke-width="7" stroke-linejoin="miter" stroke-miterlimit="10" stroke-linecap="butt"/>
-        <path d="M100,15 L118,52 L82,52 Z" fill="#8A6A2E"/>
-      </svg>
-    </div>
+    <div class="mark-rule"><svg class="mark-sym" viewBox="0 0 200 120" aria-hidden="true"><path d="M38,120 L100,0 L162,120" fill="none" stroke="#16181C" stroke-width="7" stroke-linejoin="miter" stroke-miterlimit="10" stroke-linecap="butt"/><path d="M100,15 L118,52 L82,52 Z" fill="#8A6A2E"/></svg><span class="mark-drop"></span></div>
+    <p class="mark-word"><span class="peak"><span class="ini">P</span>EAK</span> <span class="pulse"><span class="ini">P</span>ULSE</span></p>
   </div>
 
-  <section id="wadaa">
+  <section id="situation" data-rail>
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow" data-reveal>أين أنتم اليوم</p>
+        <p class="eyebrow" data-reveal><span class="ey-rule"></span><span class="ey-num">01</span> أين أنتم اليوم</p>
         <h2 class="h-title" data-reveal>ثلاثة أمور تكلّفكم عملاء كل أسبوع.</h2>
       </div>
-      <ul class="statements">
-        <li class="statement" data-reveal>يجدونكم، ولا أحد يفهم خلال ثلاث ثوانٍ ما الذي تبيعونه.</li>
-        <li class="statement" data-reveal>موقعكم يستقبل زيارات لا تتحول إلى طلبات.</li>
-        <li class="statement" data-reveal>تنشرون بانتظام دون معرفة ما يعود عليكم.</li>
-      </ul>
+      <ul class="statements"><li class="statement" data-reveal>يجدونكم، ولا أحد يفهم خلال ثلاث ثوانٍ ما الذي تبيعونه.</li><li class="statement" data-reveal>موقعكم يستقبل زيارات لا تتحول إلى طلبات.</li><li class="statement" data-reveal>تنشرون بانتظام دون معرفة ما يعود عليكم.</li></ul>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <section id="khadamat">
+  <section class="mission" id="mission" data-rail>
+    <svg class="mission-mark" viewBox="0 0 200 200" aria-hidden="true"><path d="M30,168 L100,28 L170,168" fill="none" stroke="#E7E0D2" stroke-width="4" stroke-linejoin="miter" stroke-miterlimit="10"/><path d="M100,52 L122,96 L78,96 Z" fill="#C9A45B"/><path d="M18,168 H182" stroke="#C9A45B" stroke-width="1.6" fill="none"/></svg>
+    <div class="wrap">
+      <p class="eyebrow on-dark" data-reveal><span class="ey-rule"></span><span class="ey-num">02</span> مهمتنا</p>
+      <h2 class="mission-title" data-reveal>نبني حضوراً يغطي كلفته.</h2>
+      <div class="mission-body">
+        <p data-reveal>بيك بالس موجودة لسبب واحد. قد تكون العلامة ممتازة وتبقى غير مرئية، والعلامة غير المرئية تخسر أمام من يظهر ببساطة بشكل أفضل. هذه المسافة هي ما نغلقه.</p>
+        <p data-reveal>نعمل على المكشوف، أولوية واحدة في كل مرة، ونربط كل خطوة برقم يهمكم أصلاً. لا ضجيج، ولا أرقام للمظهر، ولا عقود طويلة نختبئ خلفها. وحين يتوقف العمل عن أن يفيد، نقولها أولاً.</p>
+      </div>
+      <div class="principles"><div class="principle" data-reveal><p class="p-kicker">الترتيب قبل الضجيج</p><p class="p-line">الفعل الصحيح في الأسبوع الصحيح. الترتيب هو معظم النتيجة.</p></div><div class="principle" data-reveal><p class="p-kicker">الدليل قبل الوعد</p><p class="p-line">نقيس ما ننفذه، ونعرض عليكم الأرقام التي نتابعها.</p></div><div class="principle" data-reveal><p class="p-kicker">يبقى لكم</p><p class="p-line">كل وثيقة، كل حساب، كل ملف يبقى باسمكم.</p></div></div>
+    </div>
+  </section>
+
+  <section id="services" data-rail>
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow" data-reveal>الخدمات</p>
+        <p class="eyebrow" data-reveal><span class="ey-rule"></span><span class="ey-num">03</span> الخدمات</p>
         <h2 class="h-title" data-reveal>أربعة محاور، ولا نعمل عليها كلها في وقت واحد.</h2>
         <p class="lead svc-intro" data-reveal>نبدأ بما يعطي أثراً أسرع في حالتكم. والباقي يأتي بعد أن تثبت القاعدة.</p>
       </div>
-      <div class="groups">
-        <div class="group" data-reveal>
-          <h3 class="group-title">الاستراتيجية والأداء</h3>
-          <ul class="group-items">
-            <li>استراتيجية رقمية</li>
-            <li>إعلانات مدفوعة على غوغل وميتا ولينكدإن</li>
-            <li>تحليل البيانات وعائد الاستثمار</li>
-            <li>تحسين معدل التحويل</li>
-          </ul>
-        </div>
-        <div class="group" data-reveal>
-          <h3 class="group-title">الظهور والمحتوى</h3>
-          <ul class="group-items">
-            <li>تحسين محركات البحث</li>
-            <li>شبكات التواصل</li>
-            <li>محتوى تحريري ونشرات وفيديو</li>
-            <li>التسويق عبر المؤثرين</li>
-            <li>السمعة الرقمية والتقييمات</li>
-            <li>العلاقات الصحفية الرقمية</li>
-          </ul>
-        </div>
-        <div class="group" data-reveal>
-          <h3 class="group-title">الإبداع والتقنية</h3>
-          <ul class="group-items">
-            <li>المواقع والمتاجر الإلكترونية</li>
-            <li>هوية العلامة ودليلها</li>
-            <li>التصميم البصري</li>
-            <li>ربط أنظمة إدارة العملاء</li>
-            <li>الذكاء الاصطناعي في خدمة العلاقة مع العميل</li>
-          </ul>
-        </div>
-        <div class="group" data-reveal>
-          <h3 class="group-title">النمو والولاء</h3>
-          <ul class="group-items">
-            <li>حملات البريد والأتمتة</li>
-            <li>مسار الاستقطاب</li>
-            <li>التجريب والقياس</li>
-          </ul>
-        </div>
-      </div>
+      <div class="groups"><div class="group" data-reveal><h3 class="group-title">الاستراتيجية والأداء</h3><ul class="group-items"><li>استراتيجية رقمية</li><li>إعلانات مدفوعة على غوغل وميتا ولينكدإن</li><li>تحليل البيانات وعائد الاستثمار</li><li>تحسين معدل التحويل</li></ul></div><div class="group" data-reveal><h3 class="group-title">الظهور والمحتوى</h3><ul class="group-items"><li>تحسين محركات البحث</li><li>شبكات التواصل</li><li>محتوى تحريري ونشرات وفيديو</li><li>التسويق عبر المؤثرين</li><li>السمعة الرقمية والتقييمات</li><li>العلاقات الصحفية الرقمية</li></ul></div><div class="group" data-reveal><h3 class="group-title">الإبداع والتقنية</h3><ul class="group-items"><li>المواقع والمتاجر الإلكترونية</li><li>هوية العلامة ودليلها</li><li>التصميم البصري</li><li>ربط أنظمة إدارة العملاء</li><li>الذكاء الاصطناعي في خدمة العلاقة مع العميل</li></ul></div><div class="group" data-reveal><h3 class="group-title">النمو والولاء</h3><ul class="group-items"><li>حملات البريد والأتمتة</li><li>مسار الاستقطاب</li><li>التجريب والقياس</li></ul></div></div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <section id="tashkhis">
+  <section id="diagnostic" data-rail>
     <div class="wrap diag">
       <div>
-        <p class="eyebrow" data-reveal>التشخيص</p>
+        <p class="eyebrow" data-reveal><span class="ey-rule"></span><span class="ey-num">04</span> التشخيص</p>
         <h2 class="h-title" data-reveal>قبل أي عرض، وثيقة.</h2>
         <p class="lead" data-reveal style="margin-top:22px">تدقيق كامل لحضوركم الرقمي. ما ينجح، وما يعيق، وما يفعله منافسوكم، وترتيب المعالجة. الوثيقة لكم، سواء عملنا معاً أو لا.</p>
-        <ul class="diag-list" data-reveal>
-          <li>قياس دقيق لموقعكم ولظهوركم في البحث ولحساباتكم</li>
-          <li>ما يفعله منافسوكم على عمليات البحث نفسها</li>
-          <li>الإصلاحات التي تبدأ هذا الأسبوع، مرتبة حسب الأولوية</li>
-          <li>خطة 90 يوماً مع المؤشرات التي ستُتابع</li>
-        </ul>
-        <a class="btn btn-line" href="#tashkhis" data-reveal>اطلبوا التشخيص</a>
+        <ul class="diag-list" data-reveal><li>قياس دقيق لموقعكم ولظهوركم في البحث ولحساباتكم</li><li>ما يفعله منافسوكم على عمليات البحث نفسها</li><li>الإصلاحات التي تبدأ هذا الأسبوع، مرتبة حسب الأولوية</li><li>خطة 90 يوماً مع المؤشرات التي نتابعها</li></ul>
+        <a class="btn btn-line" href="#diagnostic" data-reveal>اطلبوا التشخيص</a>
       </div>
       <figure class="frame" data-reveal>
+        <svg class="frame-mark" viewBox="0 0 200 200" aria-hidden="true"><path d="M38,160 L100,40 L162,160" fill="none" stroke="#16181C" stroke-width="7" stroke-linejoin="miter" stroke-miterlimit="10" stroke-linecap="butt"/><path d="M100,55 L118,92 L82,92 Z" fill="#8A6A2E"/><path d="M14,160 H186" stroke="#8A6A2E" stroke-width="2.2" fill="none"/></svg>
+        <span class="frame-word"><span class="peak"><span class="ini">P</span>EAK</span> <span class="pulse"><span class="ini">P</span>ULSE</span></span>
         <figcaption class="brief">صفحتان من التشخيص، مسطحتان، بإضاءة جانبية. لا صور من البنوك.</figcaption>
       </figure>
     </div>
@@ -159,63 +121,37 @@
 
   <div class="divider"></div>
 
-  <section id="halat">
+  <section id="situations" data-rail>
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow" data-reveal>الحالات</p>
+        <p class="eyebrow" data-reveal><span class="ey-rule"></span><span class="ey-num">05</span> الحالات</p>
         <h2 class="h-title" data-reveal>أربع حالات، ومنهج واحد.</h2>
         <p class="lead" data-reveal style="margin-top:22px">ستتعرفون على حالتكم. في الحالات الأربع تبدأ الطريق بالتشخيص نفسه، ولا تقل المهمة عن ثلاثة أشهر. هذا هو الوقت الذي تحتاجه الأرقام.</p>
       </div>
-      <ul class="cases">
-        <li class="case" data-reveal>تطلقون علامة جديدة وكل شيء ما زال قيد البناء</li>
-        <li class="case" data-reveal>موقعكم يستقبل زواراً ولا ينتج طلبات</li>
-        <li class="case" data-reveal>تظهرون على الشبكات ولا تظهرون على غوغل</li>
-        <li class="case" data-reveal>تبيعون فعلاً وتريدون توسيع الاستقطاب</li>
-      </ul>
+      <ul class="cases"><li class="case" data-reveal>تطلقون علامة جديدة وكل شيء ما زال قيد البناء</li><li class="case" data-reveal>موقعكم يستقبل زواراً ولا ينتج طلبات</li><li class="case" data-reveal>تظهرون على الشبكات ولا تظهرون على غوغل</li><li class="case" data-reveal>تبيعون فعلاً وتريدون توسيع الاستقطاب</li></ul>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <section id="manhaj">
+  <section id="method" data-rail>
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow" data-reveal>المنهج</p>
+        <p class="eyebrow" data-reveal><span class="ey-rule"></span><span class="ey-num">06</span> المنهج</p>
         <h2 class="h-title" data-reveal>أربع مراحل، بهذا الترتيب.</h2>
       </div>
-      <div class="stages">
-        <div class="stage" data-reveal>
-          <p class="stage-num">01</p>
-          <h3 class="stage-name">التشخيص</h3>
-          <p class="stage-line">ننظر قبل أن نقترح. الوثيقة لكم، حتى لو توقف الأمر هنا.</p>
-        </div>
-        <div class="stage" data-reveal>
-          <p class="stage-num">02</p>
-          <h3 class="stage-name">الخطة</h3>
-          <p class="stage-line">90 يوماً، مكتوبة، بالأولويات والمسؤوليات والتواريخ.</p>
-        </div>
-        <div class="stage" data-reveal>
-          <p class="stage-num">03</p>
-          <h3 class="stage-name">التنفيذ</h3>
-          <p class="stage-line">تصميم، نصوص، تطوير، إعلان. توافقون، وننفذ.</p>
-        </div>
-        <div class="stage" data-reveal>
-          <p class="stage-num">04</p>
-          <h3 class="stage-name">القياس</h3>
-          <p class="stage-line">مراجعة شهرية للأرقام التي تحسم: الطلبات، العروض، المبيعات.</p>
-        </div>
-      </div>
+      <div class="stages"><div class="stage" data-reveal><p class="stage-num">01</p><h3 class="stage-name">التشخيص</h3><p class="stage-line">ننظر قبل أن نقترح. الوثيقة لكم، حتى لو توقف الأمر هنا.</p></div><div class="stage" data-reveal><p class="stage-num">02</p><h3 class="stage-name">الخطة</h3><p class="stage-line">90 يوماً، مكتوبة، بالأولويات والمسؤوليات والتواريخ.</p></div><div class="stage" data-reveal><p class="stage-num">03</p><h3 class="stage-name">التنفيذ</h3><p class="stage-line">تصميم، نصوص، تطوير، إعلان. توافقون، وننفذ.</p></div><div class="stage" data-reveal><p class="stage-num">04</p><h3 class="stage-name">القياس</h3><p class="stage-line">مراجعة شهرية للأرقام التي تحسم: الطلبات، العروض، المبيعات.</p></div></div>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <section class="closing">
+  <section class="closing" id="closing">
     <div class="wrap">
       <h2 class="h-title" data-reveal>لنبدأ بمعرفة أين أنتم.</h2>
       <div class="closing-actions" data-reveal>
-        <a class="btn btn-solid" href="#tashkhis">اطلبوا تشخيصاً</a>
-        <a class="btn btn-line" href="#khadamat">اطّلعوا على الخدمات</a>
+        <a class="btn btn-solid" href="#diagnostic">اطلبوا تشخيصاً</a>
+        <a class="btn btn-line" href="#services">اطّلعوا على الخدمات</a>
       </div>
       <p class="closing-fine" data-reveal>لشبونة. الرد خلال يومَي عمل</p>
     </div>
@@ -227,34 +163,26 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-sig">
-        <span class="sig">
-          <span class="sig-name"><span class="peak">PEAK</span> <span class="pulse">PULSE</span></span>
-          <span class="sig-sub">Digital Marketing Agency</span>
-        </span>
+        <span class="sig"><span class="sig-name"><span class="peak"><span class="ini">P</span>EAK</span> <span class="pulse"><span class="ini">P</span>ULSE</span></span><span class="sig-sub">Digital Marketing Agency</span></span>
       </div>
       <div class="footer-col">
         <h3>الخدمات</h3>
-        <ul>
-          <li><a href="#khadamat">الاستراتيجية والأداء</a></li>
-          <li><a href="#khadamat">الظهور والمحتوى</a></li>
-          <li><a href="#khadamat">الإبداع والتقنية</a></li>
-          <li><a href="#khadamat">النمو والولاء</a></li>
-        </ul>
+        <ul><li><a href="#services">الاستراتيجية والأداء</a></li><li><a href="#services">الظهور والمحتوى</a></li><li><a href="#services">الإبداع والتقنية</a></li><li><a href="#services">النمو والولاء</a></li></ul>
       </div>
       <div class="footer-col">
         <h3>المنهج</h3>
         <ul>
-          <li><a href="#tashkhis">التشخيص</a></li>
-          <li><a href="#halat">الحالات</a></li>
-          <li><a href="#manhaj">المنهج</a></li>
+          <li><a href="#mission">مهمتنا</a></li>
+          <li><a href="#diagnostic">التشخيص</a></li>
+          <li><a href="#method">المنهج</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h3>التواصل</h3>
         <ul>
-          <li><a href="#tashkhis">اطلبوا تشخيصاً</a></li>
-          <li><a href="#tashkhis">واتساب</a></li>
-          <li><span class="footer-city">لشبونة</span></li>
+          <li><a href="#diagnostic">اطلبوا تشخيصاً</a></li>
+          <li><a href="#diagnostic">واتساب</a></li>
+          <li><span>لشبونة</span></li>
         </ul>
       </div>
     </div>
@@ -264,35 +192,45 @@
         <a href="/">PT</a>
         <a href="/en/">EN</a>
         <a href="/fr/">FR</a>
+        <a href="/nl/">NL</a>
         <a href="/ar/" aria-current="true">AR</a>
       </span>
       <span class="footer-legal">
-        <a href="#aala">الخصوصية</a>
-        <a href="#aala">ملفات الارتباط</a>
+        <a href="#top">الخصوصية</a>
+        <a href="#top">ملفات الارتباط</a>
       </span>
     </div>
   </div>
 </footer>
 
-<nav class="actionbar" aria-label="إجراءات">
-  <a href="#tashkhis">اطلبوا تشخيصاً</a>
-  <a href="#tashkhis">واتساب</a>
+<nav class="actionbar" aria-label="Peak Pulse">
+  <a href="#diagnostic">اطلبوا تشخيصاً</a>
+  <a href="#diagnostic">واتساب</a>
 </nav>
 
 <script>
 (function(){
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = [].slice.call(document.querySelectorAll('[data-reveal]'));
-  els.forEach(function(el){ el.classList.add('reveal'); });
-  var io = new IntersectionObserver(function(list){
-    list.forEach(function(e){
-      if(!e.isIntersecting) return;
-      var el = e.target, sibs = [].slice.call(el.parentNode.children).filter(function(s){return s.hasAttribute('data-reveal');});
-      setTimeout(function(){ el.classList.add('is-in'); }, Math.max(0, sibs.indexOf(el)) * 70);
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!rm){
+    var els=[].slice.call(document.querySelectorAll('[data-reveal]'));
+    els.forEach(function(el){el.classList.add('reveal');});
+    var io=new IntersectionObserver(function(list){list.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var el=e.target, s=[].slice.call(el.parentNode.children).filter(function(n){return n.hasAttribute('data-reveal');});
+      setTimeout(function(){el.classList.add('is-in');}, Math.max(0,s.indexOf(el))*70);
       io.unobserve(el);
-    });
-  }, {threshold: 0.14});
-  els.forEach(function(el){ io.observe(el); });
+    });},{threshold:0.14});
+    els.forEach(function(el){io.observe(el);});
+  }
+  var links=[].slice.call(document.querySelectorAll('.rail a'));
+  var secs=[].slice.call(document.querySelectorAll('[data-rail]'));
+  if(secs.length && 'IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(list){list.forEach(function(e){
+      if(!e.isIntersecting)return; var id=e.target.id;
+      links.forEach(function(a){a.classList.toggle('on', a.getAttribute('href')==='#'+id);});
+    });},{rootMargin:'-45% 0px -50% 0px'});
+    secs.forEach(function(s){so.observe(s);});
+  }
 })();
 </script>
 
