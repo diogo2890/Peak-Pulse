@@ -273,12 +273,12 @@ html[dir="rtl"] .hero-sub { font-weight: 400; }
 }
 html[dir="rtl"] .hero-note { letter-spacing: 0; font-size: 12px; }
 
-/* Signature rule with symbol */
+/* Signature rule with symbol, full width of the viewport, edge to edge */
+.markband { width: 100%; margin-block: clamp(40px, 6vw, 72px); }
 .mark-rule {
   position: relative;
   width: 100%;
   border-top: 1px solid var(--rule);
-  margin-block: clamp(40px, 6vw, 72px);
 }
 .mark-rule svg {
   position: absolute;
